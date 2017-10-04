@@ -1,12 +1,5 @@
 # Lab 9: Classifying handwritten digits with a neural network
 
-#### Goals for this lab
-- [ ] Build the bulk of a neural network model from scratch
-- [ ] Learn and apply the backpropagation algorithm
-- [ ] Train and test a network on a real problem: handwritten digit recognition.
-
-## The MNIST dataset
-
 In this lab, you'll build a three-layer neural network for classifying handwriting. The dataset
 contains 70,000 examples of written digits (0-9) from Census workers and high school students.
 Each digit is a 28x28 matrix, with values between 0 and 1 corresponding to the level of brightness
@@ -16,9 +9,10 @@ of the pixel. Here is a sample of images from the data set:
 
 You can open the load-mnist-data.R file to learn a bit more about the dataset.
 
-## Building the network
+### Building the network
 
-The backprop-network.R file will walk you through the basic steps of building the network. Since we
-haven't talked about how backprop works yet, the comments and instructions in the code are essential
-for guiding you through the process.
+The backprop-network.R file will walk you through the steps of building the network. 
+The comments in the code are essential for guiding you through the process.
+
+
 
