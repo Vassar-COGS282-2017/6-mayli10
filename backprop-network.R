@@ -1,4 +1,4 @@
-source('load-mnist-data.R') # run this once, and then comment out to save processing time.
+#source('load-mnist-data.R') # run this once, and then comment out to save processing time.
 
 n.inputs <- 784 # The input images are 28x28, for a total of 784 pixels
 n.hidden <- 30 # Number of hidden layer nodes. You can adjust this parameter once you get the network working.
@@ -13,12 +13,14 @@ learning.rate <- 0.2 # Learning rate parameter for backprop. You can adjust this
 epoch.train.size <- 100 # randomly sample this many training examples (max = 60,000)
 epoch.test.size <- 50 # randomly sample this many test examples (max=10,000)
 
+#nonlinear activation function, in order to get benefits of multilayer network, activ func needs to be nonlinear
 # This is the sigmoid activation function.
 sigmoid.activation <- function(x){
   return(1 / (1+exp(-x)))
 }
 
 # Add some code to visualize the sigmoid activation function from x=-10 to x=10.
+plot(sapply(-10:10, sigmoid.activation))
 
 # Initializing the matrices to hold the connection weights.
 # We'll create one matrix for the weights from the input to hidden layer, and another for the weights from the 
@@ -74,8 +76,7 @@ backprop <- function(input, target, input.to.hidden.weights, hidden.to.output.we
   output.activation <- activations$output
   hidden.activation <- activations$hidden
   
-  # Step 3. Find the error on the output units. We can find the error just like we did 
-  # with the delta rule. Just subtract the actual output from the desired output.
+  # Step 3. Find the error on the output units. Just subtract the actual output from the desired output.
   output.error <- NA # replace NA with correct code.
   
   # Step 4. We need to multiply the error for a node (an element in the output.error vector)
